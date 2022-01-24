@@ -1,18 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <myEchart :options="options"></myEchart>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import myEchart from './components/myEchart.vue'
+import options from './option'
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    myEchart
+  },
+  data() {
+    return {
+      options:options
+    }
+  },
 }
 </script>
 
